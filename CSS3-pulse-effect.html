@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS3 Pulse Effect</title>
+    <style>
+        body {
+            background-color: #484848;
+        }
+
+        .container {
+            margin-top: 100px;
+            text-align: center;
+        }
+
+        .dot {
+            width: 20px;
+            height: 20px;
+            display: inline-block;
+            border-radius: 100%;
+            margin: 0 50px;
+        }
+
+        .dot:nth-child(1) {
+            background-color: #f53918;
+            animation: pulse 1.5s 0.25s ease-out infinite;
+        }
+
+        .dot:nth-child(2) {
+            background-color: #f53918;
+            animation: pulse 1.5s 0.50s ease-out infinite;
+        }
+
+        .dot:nth-child(3) {
+            background-color: #f53918;
+            animation: pulse 1.5s 0.75s ease-out infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 8px 6px transparent,
+                            0 0 0 0 transparent,
+                            0 0 0 0 transparent;
+            }
+
+            10% {
+                box-shadow: 0 0 8px 6px #e46b26,
+                            0 0 12px 10px transparent,
+                            0 0 12px 5px #e46b26;
+            }
+
+            100% {
+                box-shadow: 0 0 8px 6px transparent,
+                            0 0 0 40px transparent,
+                            0 0 0 40px transparent;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+    </div>
+</body>
+</html>
