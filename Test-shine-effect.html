@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Shine Effect</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet"> 
+    <style>
+        body {
+            background-color: #383838;
+        }
+
+        h1.txtShine {
+            font-family: 'Fredoka One', cursive;
+            color: #fff;
+            font-size: 80px;
+            display: inline-block;
+            mask-image: linear-gradient(-75deg, #000 30%, rgba(0, 0, 0, 0.178) 50%, #000 90%);
+            -webkit-mask-image: linear-gradient(-75deg, #000 30%, rgba(0, 0, 0, 0.178) 50%, #000 90%);
+            mask-size: 200%;
+            -webkit-mask-size: 200%;
+            animation: shine 2s infinite;
+        }
+
+        @keyframes shine {
+            from {
+                mask-position: 150%;
+                -webkit-mask-position: 150%;
+            }
+
+            to {
+                mask-position: -50%;
+                -webkit-mask-position: -50%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1 class="txtShine">Geekboots</h1>
+</body>
+</html>
