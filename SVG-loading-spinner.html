@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SVG Progress Spinner</title>
+    <style>
+        body {
+            background-color: #0d0d0d;
+        }
+       section {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100vh;
+       }
+
+       .spinner {
+           position: absolute;
+           top: 0;
+           left: 0;
+           right: 0;
+           bottom: 0;
+           margin: auto;
+           width: 350px;
+           height: 350px;
+           animation: rotate 2s linear infinite;
+       }
+
+       .spinner circle {
+           stroke: #fff;
+           fill: none;
+           stroke-width: 2px;
+           stroke-linecap: round;
+           filter: drop-shadow(0 0 3px #ff33ff);
+           animation: dash 1.5s ease-in-out infinite;
+       }
+
+       h3 {
+           color: #fff;
+           font-size: 25px;
+           text-shadow: 0 0 5px #ff33ff;
+       }
+
+       @keyframes rotate {
+           100% {
+               transform: rotate(360deg);
+           }
+       }
+
+       @keyframes dash {
+           0% {
+               stroke-dasharray: 1, 150;
+               stroke-dashoffset: 0;
+           }
+
+           50% {
+               stroke-dasharray: 90, 150;
+               stroke-dashoffset: -35;
+           }
+
+           100% {
+               stroke-dasharray: 90, 150;
+               stroke-dashoffset: -124;
+           }
+       }
+
+    </style>
+</head>
+<body>
+    <section>
+        <svg class="spinner" viewBox="0 0 100 100">
+            <circle cx="50" cy="50" r="20"></circle>
+        </svg>
+        <h3>CSS 3</h3>
+    </section>
+</body>
+</html>
